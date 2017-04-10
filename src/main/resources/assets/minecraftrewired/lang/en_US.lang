@@ -1,0 +1,10 @@
+# Blocks
+tile.unwiredwiring:wireRed.name=Red Wire
+
+# Items
+item.unwiredwiring:wrenchRed.name=Red Wrench
+
+item.unwiredwiring:wrenchRedCreative.name=Red Creative Wrench
+
+# Creative Tabs
+itemGroup.tabUnwiredWiring=Unwired Wiring

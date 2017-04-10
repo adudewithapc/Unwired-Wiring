@@ -1,0 +1,16 @@
+[
+{
+  "modid": "unwiredwiring",
+  "name": "Unwired Wiring",
+  "description": "A minecraft adaptation of terrarias wire(redstone) mechanics",
+  "version": "0.0.1",
+  "mcversion": "1.11.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["That Martin Guy"],
+  "credits": "Re-Logic for creating terraria and its awesome wiring system.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
