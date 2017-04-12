@@ -13,8 +13,11 @@ public class TileEntityWire extends TileEntityHideable
 
 	public void setPowerLevel(int powerLevel)
 	{
-		this.powerLevel = powerLevel;
-		this.markDirty();
+		if(this.powerLevel != powerLevel)
+		{
+			this.powerLevel = powerLevel;
+			this.markDirty();
+		}
 	}
 
 	@Override
@@ -29,6 +32,6 @@ public class TileEntityWire extends TileEntityHideable
 	public void readFromNBT(NBTTagCompound compound)
 	{
 		super.readFromNBT(compound);
-		this.powerLevel = compound.getInteger("powerLevel");
+		this.setPowerLevel(compound.getInteger("powerLevel"));
 	}
 }

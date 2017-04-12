@@ -91,7 +91,7 @@ public class BlockHideable extends Block implements ITileEntityProvider
 	public IBlockState getStateForPlacement(World world, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer, EnumHand hand)
 	{
 		IBlockState blockState = this.getDefaultState().withProperty(HIDDEN, true);
-		return super.getStateForPlacement(world, pos, facing, hitX, hitY, hitZ, meta, placer, hand);
+		return blockState;
 	}
 	
 	@Override
@@ -131,7 +131,7 @@ public class BlockHideable extends Block implements ITileEntityProvider
 	@Override
 	public int getMetaFromState(IBlockState state)
 	{
-		return 0;
+		return state.getValue(HIDDEN) ? 0 : 1;
 	}
 	
 	@Override
@@ -159,6 +159,7 @@ public class BlockHideable extends Block implements ITileEntityProvider
 	}
 	
 	//==========================================================REDSTONE RELATED CODE=========================================================//
+	//Currently unused, see BlockWire
 	/**@Override
 	public int getWeakPower(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side)
 	{
