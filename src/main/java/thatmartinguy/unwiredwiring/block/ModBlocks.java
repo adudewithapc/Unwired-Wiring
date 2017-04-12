@@ -5,6 +5,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import thatmartinguy.unwiredwiring.tileentity.TileEntityHideable;
+import thatmartinguy.unwiredwiring.tileentity.TileEntityWire;
 
 public class ModBlocks
 {
@@ -29,7 +30,8 @@ public class ModBlocks
 	
 	private static void registerTileEntities()
 	{
-		registerTileEntity(TileEntityHideable.class, "tileEntityWire");
+		registerTileEntity(TileEntityHideable.class, "tileEntityHideable");
+		registerTileEntity(TileEntityWire.class, "tileEntityWire");
 	}
 	
 	private static void registerBlock(Block block)
