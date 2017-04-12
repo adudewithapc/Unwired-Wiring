@@ -2,21 +2,16 @@ package thatmartinguy.unwiredwiring.item;
 
 import java.util.List;
 
-import com.mojang.realmsclient.gui.ChatFormatting;
-
-import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.items.ItemHandlerHelper;
-import thatmartinguy.unwiredwiring.UnwiredWiring;
 import thatmartinguy.unwiredwiring.block.BlockWire;
 import thatmartinguy.unwiredwiring.util.Reference;
 

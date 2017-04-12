@@ -1,10 +1,15 @@
 # Blocks
 tile.unwiredwiring:wireRed.name=Red Wire
 
-# Items
+# Wrenches
 item.unwiredwiring:wrenchRed.name=Red Wrench
 
 item.unwiredwiring:wrenchRedCreative.name=Red Creative Wrench
+
+# Items
+item.unwiredwiring:itemRedstoneLens.name=Redstone Lens
+item.unwiredwiring:itemRedstoneGlasses.name=Redstone Glasses
+item.unwiredwiring:baubleRedstoneGlasses.name=Redstone Glasses
 
 # Creative Tabs
 itemGroup.tabUnwiredWiring=Unwired Wiring

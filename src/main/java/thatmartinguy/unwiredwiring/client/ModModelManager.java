@@ -12,7 +12,7 @@ public class ModModelManager
 	public static void registerAllModels()
 	{
 		registerItemModels();
-		registerBlockModels();
+		//registerBlockModels();
 	}
 	
 	private static void registerItemModels()

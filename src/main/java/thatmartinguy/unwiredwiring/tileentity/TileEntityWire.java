@@ -1,19 +1,10 @@
 package thatmartinguy.unwiredwiring.tileentity;
 
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ITickable;
-import net.minecraft.world.World;
-import thatmartinguy.unwiredwiring.client.HideManager;
 
-public class TileEntityWire extends TileEntity implements ITickable
+public class TileEntityWire extends TileEntityHideable
 {
-	int powerLevel;
-	
-	public TileEntityWire(World world)
-	{
-		this.setWorld(world);
-	}
+	private int powerLevel;
 	
 	public int getPowerLevel()
 	{
@@ -22,26 +13,8 @@ public class TileEntityWire extends TileEntity implements ITickable
 
 	public void setPowerLevel(int powerLevel)
 	{
-		this.setPowerLevel(powerLevel, true);
-	}
-	
-	public void setPowerLevel(int powerLevel, boolean markDirty)
-	{
-		if(!this.world.isRemote)
-		{
-			if(this.powerLevel == powerLevel) return;
-			
-			if(powerLevel < 0)
-				this.powerLevel = 0;
-			else if(powerLevel > 15)
-				this.powerLevel = 15;
-			else
-				this.powerLevel = powerLevel;
-			System.out.println(this.powerLevel);
-			
-			if(markDirty)
-				this.markDirty();
-		}
+		this.powerLevel = powerLevel;
+		this.markDirty();
 	}
 
 	@Override
@@ -56,16 +29,6 @@ public class TileEntityWire extends TileEntity implements ITickable
 	public void readFromNBT(NBTTagCompound compound)
 	{
 		super.readFromNBT(compound);
-		this.setPowerLevel(compound.getInteger("powerLevel"), false);
-	}
-	
-	//Update whether the wire is hidden
-	@Override
-	public void update()
-	{
-		if(world.isRemote)
-		{
-			HideManager.refresh(world, pos);
-		}
+		this.powerLevel = compound.getInteger("powerLevel");
 	}
 }

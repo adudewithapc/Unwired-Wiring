@@ -18,7 +18,7 @@ public class ItemCreativeWrench extends ItemWrench
 	public ItemCreativeWrench(String unlocalizedName, String registryName, BlockWire wireType)
 	{
 		super(unlocalizedName, registryName, wireType);
-		this.setCreativeTab(UnwiredWiring.TabMinecraftRewired);
+		this.setCreativeTab(UnwiredWiring.tabUnwiredWiring);
 	}
 	
 	@Override
